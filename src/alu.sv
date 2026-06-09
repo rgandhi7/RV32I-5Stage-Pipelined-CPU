@@ -27,3 +27,4 @@ module alu (
     assign zero = (result == 32'd0);
 
 endmodule// Fixed signed SLT comparison logic
+// Fixed signed SLT comparison logic
