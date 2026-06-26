@@ -1,0 +1,38 @@
+// Initialization
+40000513 // addi x10, x0, 1024 
+40050513 // addi x10, x10, 1024
+40050513 // addi x10, x10, 1024
+40050513 // addi x10, x10, 1024 (x10 = 0x1000)
+40050593 // addi x11, x10, 1024
+40058593 // addi x11, x11, 1024
+40058593 // addi x11, x11, 1024
+40058593 // addi x11, x11, 1024 (x11 = 0x2000)
+02A00613 // addi x12, x0, 42    (Password: 42)
+00100693 // addi x13, x0, 1     (Locked Pattern)
+FFF00713 // addi x14, x0, -1    (Unlocked Pattern)
+00F00793 // addi x15, x0, 15    (Error Pattern)
+
+// Start
+00D5A023 // sw x13, 0(x11)      (Turn on Locked LED)
+
+// Check Button
+00452283 // lw x5, 4(x10)       Read Button
+FE028EE3 // beq x5, x0, -4      If 0, jump back 1 instruction
+
+// Check password:
+00052303 // lw x6, 0(x10)       
+00C30663 // beq x6, x12, +12    
+
+// Fail:
+00F5A023 // sw x15, 0(x11)      
+00000463 // beq x0, x0, +8     
+
+// Success
+00E5A023 // sw x14, 0(x11)      
+
+// Wait for reset
+00452283 // lw x5, 4(x10)       
+FE028EE3 // beq x5, x0, -4      
+
+// Reset:
+FA000CE3 // beq x0, x0, -40    00000013
