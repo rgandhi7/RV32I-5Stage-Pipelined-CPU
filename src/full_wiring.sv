@@ -368,3 +368,4 @@ module full_wiring (
     assign alu_out = alu_result;
 
 endmodule// Forwarding and hazard control lines connected
+// Forwarding and hazard control lines connected
