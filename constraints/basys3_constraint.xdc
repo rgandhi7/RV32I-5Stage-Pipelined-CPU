@@ -91,3 +91,4 @@ set_property PACKAGE_PIN P1 [get_ports {led[14]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led[14]}]
 set_property PACKAGE_PIN L1 [get_ports {led[15]}]                    
 set_property IOSTANDARD LVCMOS33 [get_ports {led[15]}]# Timing exception for 7-segment display refresh
+# Timing exception for 7-segment display refresh
