@@ -1,6 +1,6 @@
 # 5-Stage Pipelined RV32I CPU Core
 
-A 32-bit RISC-V processor core designed in SystemVerilog, synthesized and implemented on the Digilent Basys 3 FPGA (Artix-7). The core features a classic 5-stage pipeline architecture with explicit pipeline register isolation between stages, full hardware data forwarding, hazard detection with load-use stalling, and branch flush control handling.
+A 32-bit RISC-V processor core designed in SystemVerilog, synthesized and implemented on the Digilent Basys 3 FPGA (Artix-7). The core features a classic 5-stage pipeline architecture with explicit pipeline register isolation between stages, full hardware data forwarding, hazard detection with load-use stalling, and control hazard handling.
 
 ---
 
