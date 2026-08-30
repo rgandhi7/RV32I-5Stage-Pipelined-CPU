@@ -1,8 +1,9 @@
 # RV32I 5-Stage Pipelined Processor
 
-## Project Structure
-- `src/`: Synthesizable SystemVerilog RTL modules
-- `tb/`: Directed and randomized testbenches
-- `constraints/`: Digilent Basys 3 Artix-7 master XDC
-- `firmware/`: Machine code memory initialization files
-- `hardware-demo/`: Visual validation assets
+A synthesizable, 5-stage pipelined 32-bit RISC-V (RV32I) processor core implemented in SystemVerilog. Designed with hazard detection, data forwarding, and hardware-validated execution targeting Xilinx Artix-7 FPGAs (Digilent Basys 3).
+
+---
+
+## Architecture Overview
+
+The core implements a classic 5-stage RISC pipeline:
